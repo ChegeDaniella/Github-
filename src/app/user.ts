@@ -1,3 +1,3 @@
 export class User {
-    userInput:string;
+    public userInput:string;
 }
