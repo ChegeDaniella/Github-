@@ -21,12 +21,7 @@ export class SearchComponent implements OnInit {
     
   }
 
-  findProfile(){
 
-  	this.profileService.getProfileInfo().subscribe(profile => {
-  		console.log(profile);
-  		this.profile = profile;
-  });
 
  
 
@@ -34,4 +29,4 @@ export class SearchComponent implements OnInit {
 
   
 
-}}
+}

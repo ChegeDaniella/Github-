@@ -10,26 +10,18 @@ import { map } from 'rxjs/operators'
 })
 export class ProfileService {
 
-   User;
-  apiKey='312067413d60becaa4805cdb584ffaa9c9e5c8b0'
-
-  constructor(private http:HttpClient) { 
-  	console.log("service is now ready!");
-  	this. User;
-  }
-  apiUrl='https://api.github.com/users/'
-   full=this.apiUrl+this. User+this.apiKey
-
-   getProfileInfo(){
-  	return this.http.get("https://api.github.com/users/" + this.User + "?access_token=" + this.apiKey)
-  	.pipe(map(res => res.json()));
-  }
-
-
+  private user:string;
+  private clientid = '0bf37f34931816cdf483';
+  private clientsecret='2efff79fe9624fe6cc5b6bc25b4ce8938f5e7fe0'
   
 
+  constructor(private http:HttpClient){
+    console.log('Does this service work?')
+    this.user="chege";
+  }
 
-
-
+  getUserInfoe(){
+    
+  }
  
 }

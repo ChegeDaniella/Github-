@@ -1,0 +1,13 @@
+.body {
+    background-color:lightgreen;
+    background-size: cover;
+}
+.form{
+    border:solid black 2px;
+    width: 50%;
+
+}
+h2 {
+    font-size: 370%;
+    text-align: center;
+}
