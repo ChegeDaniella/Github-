@@ -20,8 +20,9 @@ export class ProfileService {
     this.user="chege";
   }
 
-  getUserInfoe(){
-    
+  getUserInfo(){
+    return this.http.get('https://api.github.com/users/'+this.user + "?client_id=" + this.clientid + "&client_secret=" + this.clientsecret)
+    .pipe(map(res => res ));
   }
  
 }
