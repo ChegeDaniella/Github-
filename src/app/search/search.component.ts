@@ -12,11 +12,17 @@ import { ProfileService } from '../profile.service';
 })
 export class SearchComponent implements OnInit {
   inputUser= new User();
-  profile:any[];
+  profile: any;
+  
 
   constructor(private profileService: ProfileService) {
+    this.profileService.getUserInfo().subscribe(profile => {
+      console.log(profile);
+      this.profile = profile;
+    })
 
   }
+
   ngOnInit(): void {
     
   }
