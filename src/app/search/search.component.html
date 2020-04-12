@@ -3,24 +3,43 @@
     <div class="container">
 
         <h2>GitHub Search</h2>
-        <p>GitHub, Inc. is a US-based global company that provides hosting for software development version control using Git. </p>
+        <p>GitHub, Inc. is a US-based global company that provides hosting for software development version control using Git.<br>
+            Projects on GitHub can be accessed and manipulated using the standard Git command-line interface and all of the <br>standard Git commands work with it. GitHub also allows registered and unregistered users to browse public repositories on the site.<br>
+        To search for a user in Github please enter the user name below. </p>
         <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-8" >
                   <form #searchForm='ngForm' >
-                <div class="form-group">
+                <div class="form-group" id="form">
                     <label for="search">Search</label>
                     <input type="search" class="form-control" [(ngModel)]="inputUser.userInput" name="userInput">
                     <button type="submit" class="btn btn-primary">Search</button>
                 </div>
             </form>
-            </div>
-            <div class="col-sm-4">
-                <p>Yes</p>
-            </div>
+            <p>Your information will be displayed below!</p>
+        
+        </div>
             <div class="col-sm-4" id="cover">
-                <p>Maybe</p>
+                <p class="eye">The all seeing GitHub Eye!!</p>
+                
 
             </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div *ngIf="profile">
+                 {{profile.name}} <small>({{profile.login}})</small>{{profile.followers}}   
+                 <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
+                </div>  
+            </div>
+            {{profile.followers}}
+            <!-- <div class="col-sm-5">
+                <ul class="list-group">
+                    <li class="list-group-item" *ngIf="profile.followers">{{profile.followers}}</li> -->
+                    <!-- <li class="list-group-item" *ngIf="profile.hireable">Available for hire</li>
+                    <li class="list-group-item" *ngIf="profile.blog"><a href="{{profile.blog}}" target="_blank">{{profile.blog}}</a></li>
+                    <li class="list-group-item" *ngIf="profile.email"><a href="emailto:{{profile.email}}">{{profile.email}}</a></li> -->
+                <!-- </ul>
+            </div> -->
         </div>
     </div>
 
@@ -28,10 +47,7 @@
 
 
 
-  <!-- <div *ngIf="profile">
-            {{profile.name}} <small>({{profile.login}})</small>
-            <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
-        </div>  --> 
+
         
         
       

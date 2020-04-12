@@ -1,9 +1,12 @@
 #cover {
     background-image: url(src/assets/cover.jpg);
-    height: 500px;
+    height: 380px;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 200px;
+    width: 100px;
+    padding-right: 5%;
+    margin-top: -5px;
+    
 }
 .body {
     background-image: url(src/assets/allknowing.jpg);
@@ -11,4 +14,32 @@
     background-repeat: no-repeat;
     height: 650px;
     font-family: 'Fjalla One', sans-serif;
+}
+#form {
+    border: 10px solid black;
+    /* border-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><defs><linearGradient id='redgradient'><stop offset='0' stop-color='%23FFC14D'/><stop offset='0.362' stop-color='%23FF4834'/><stop offset='1' stop-color='%233B0300'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23redgradient)' width='100%' height='100%'/></g></svg>") 10% stretch; */
+    box-sizing: border-box;
+    background-color: #1D1F1F;
+    width: 40vw;
+    height: 27vh;
+    /* margin: 4em auto; */
+    margin-top: 40px;
+    color: white;
+    padding: 30px;
+}
+h2 {
+    text-align: center;
+    font-size: 70px;
+}
+p {
+    font-size: 21px;
+}
+.eye {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+
 }
