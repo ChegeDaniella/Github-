@@ -1,14 +1,18 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <form #searchForm='ngForm'>
+            <form #searchForm='ngForm' (ngSubmit)='findProfile()'>
                 <div class="form-group">
                     <label for="search">Search</label>
                     <input type="search" class="form-control" [(ngModel)]="inputUser.userInput" name="userInput">
                     display{{inputUser.userInput}}
-                    <button>Search</button>
+                    <button type="submit">Search</button>
                 </div>
             </form>
+
+            <div class="col-md-4">
+                <img class="img-thumbnail github-avatar" src="{{inputUser.avatar_url}}">
+            </div>
 
         </div>
     </div>

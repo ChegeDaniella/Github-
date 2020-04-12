@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '../user'
+import { HttpClient } from '@angular/common/http';
+import { ProfileService } from '../profile.service';
+
+
 
 @Component({
   selector: 'app-search',
@@ -8,10 +12,26 @@ import { User } from '../user'
 })
 export class SearchComponent implements OnInit {
   inputUser= new User();
+  profile:any[];
 
-  constructor() { }
+  constructor(private profileService: ProfileService) {
 
+  }
   ngOnInit(): void {
+    
   }
 
-}
+  findProfile(){
+
+  	this.profileService.getProfileInfo().subscribe(profile => {
+  		console.log(profile);
+  		this.profile = profile;
+  });
+
+ 
+
+
+
+  
+
+}}
