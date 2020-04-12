@@ -1,9 +1,14 @@
 #cover {
     background-image: url(src/assets/cover.jpg);
-    height: 100px;
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 200px;
 }
 .body {
     background-image: url(src/assets/allknowing.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    height: 650px;
+    font-family: 'Fjalla One', sans-serif;
 }

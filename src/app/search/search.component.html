@@ -1,8 +1,18 @@
 <div class="body">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet"> 
     <div class="container">
+
+        <h2>GitHub Search</h2>
+        <p>GitHub, Inc. is a US-based global company that provides hosting for software development version control using Git. </p>
         <div class="row">
             <div class="col-sm-4">
-                <p>Nop</p>
+                  <form #searchForm='ngForm' >
+                <div class="form-group">
+                    <label for="search">Search</label>
+                    <input type="search" class="form-control" [(ngModel)]="inputUser.userInput" name="userInput">
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </div>
+            </form>
             </div>
             <div class="col-sm-4">
                 <p>Yes</p>
@@ -24,10 +34,4 @@
         </div>  --> 
         
         
-        <!-- <form #searchForm='ngForm' >
-                <div class="form-group">
-                    <label for="search">Search</label>
-                    <input type="search" class="form-control" [(ngModel)]="inputUser.userInput" name="userInput">
-                    <button type="submit" class="btn btn-primary">Search</button>
-                </div>
-            </form> -->
+      
