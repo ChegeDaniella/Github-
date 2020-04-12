@@ -12,7 +12,7 @@
     background-image: url(src/assets/allknowing.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 650px;
+    height: 998px;
     font-family: 'Fjalla One', sans-serif;
 }
 #form {
@@ -41,5 +41,7 @@ p {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 50px;
-
+}
+#list {
+    font-size: 21px;
 }
