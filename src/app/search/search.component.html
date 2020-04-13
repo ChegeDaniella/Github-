@@ -11,8 +11,8 @@
                   <form #searchForm='ngForm' >
                 <div class="form-group" id="form">
                     <label for="search">Search</label>
-                    <input type="search" class="form-control" [(ngModel)]="inputUser.userInput" name="userInput">
-                    <button type="submit" class="btn btn-primary">Search</button>
+                    <input type="search" class="form-control" [(ngModel)]="userInput" name="userInput">
+                    <button type="submit" (click)='getUserProfile()'   class="btn btn-primary">Search</button>
                 </div>
             </form>
             <p>Your information will be displayed below!</p>
@@ -32,14 +32,16 @@
                 </div>  
             </div>
             <div class="col-md-6" >
+                <div *ngIf="profile">
             	<p>
                     <span >{{profile.followers}} Followers</span><br>
                     <span >Following {{profile.following}}</span><br>
                     <span >{{profile.public_gists}} Public gists</span><br>
                     <span >{{profile.public_repos}} Public Repos</span>
-                </p>
+                </p> 
                 <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
-                <button class="btn btn-primary"><a routerLink="/repository" routerLinkActive='active'></a>View repositorys</button>
+                <button class="btn btn-primary"><a routerLink="/repository" routerLinkActive='active'>View repositorys</a></button>
+            </div>
             </div>
         
         </div>

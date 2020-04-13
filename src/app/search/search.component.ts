@@ -11,16 +11,21 @@ import { ProfileService } from '../profile.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  inputUser= new User();
+  inputUser=User;
+  userInput:string
+ 
   profile: any;
   
 
   constructor(private profileService: ProfileService) {
+  
+  }
+  getUserProfile(){
+    this.profileService.updateProfile(this.userInput);
     this.profileService.getUserInfo().subscribe(profile => {
       console.log(profile);
       this.profile = profile;
     })
-
   }
 
   ngOnInit(): void {
