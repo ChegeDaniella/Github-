@@ -8,13 +8,15 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { RepositoryComponent } from './repository/repository.component';
+import { TimePassedPipe } from './time-passed.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchComponent,
-    RepositoryComponent
+    RepositoryComponent,
+    TimePassedPipe
   ],
   imports: [
     BrowserModule,

@@ -10,6 +10,7 @@ import { Repository } from '../repository'
 })
 export class RepositoryComponent implements OnInit {
   repos: any;
+  newRepo= new Repository("","", new Date());
 
   constructor(private profileService: ProfileService) {
 

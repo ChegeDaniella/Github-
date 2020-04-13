@@ -1,0 +1,10 @@
+.all {
+    background-image: linear-gradient(yellow, white);
+    background-size: cover;
+    height:700px;
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 21px;
+}
+p {
+    text-align: center;
+}

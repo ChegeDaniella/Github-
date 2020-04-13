@@ -27,12 +27,15 @@
         <div class="row" id="list">
             <div class="col-md-6">
                 <div *ngIf="profile">
-                 {{profile.name}} <strong>({{profile.login}})</strong>  
+                 
                  <img src="{{profile.avatar_url}}" class="img-circle img-responsive" alt="Profile Image">
                 </div>  
             </div>
             <div class="col-md-6" >
                 <div *ngIf="profile">
+                   <h3>{{profile.name}} <strong>({{profile.login}})</strong></h3>
+
+                    <p> This github account was created {{profile.created_at|timePassed}}</p>
             	<p>
                     <span >{{profile.followers}} Followers</span><br>
                     <span >Following {{profile.following}}</span><br>
@@ -41,6 +44,7 @@
                 </p> 
                 <p><a href="{{profile.html_url}}" target="_blank" class="btn btn-success btn-sm">View profile on github</a></p>
                 <button class="btn btn-primary"><a routerLink="/repository" routerLinkActive='active'>View repositorys</a></button>
+                <p>Click on the blue button to view repositorys</p>
             </div>
             </div>
           
