@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { RepositoryComponent } from './repository/repository.component';
 import { TimePassedPipe } from './time-passed.pipe';
+import { HighlightDirective } from './highlight.directive';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TimePassedPipe } from './time-passed.pipe';
     AppComponent,
     SearchComponent,
     RepositoryComponent,
-    TimePassedPipe
+    TimePassedPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,

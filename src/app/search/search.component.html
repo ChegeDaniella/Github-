@@ -33,7 +33,7 @@
             </div>
             <div class="col-md-6" >
                 <div *ngIf="profile">
-                   <h3>{{profile.name}} <strong>({{profile.login}})</strong></h3>
+                   <h3 appHighlight>{{profile.name}} <strong>({{profile.login}})</strong></h3>
 
                     <p> This github account was created {{profile.created_at|timePassed}}</p>
             	<p>
