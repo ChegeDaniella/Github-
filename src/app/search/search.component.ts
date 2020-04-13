@@ -15,6 +15,7 @@ export class SearchComponent implements OnInit {
   userInput:string
  
   profile: any;
+  repos: any;
   
 
   constructor(private profileService: ProfileService) {
@@ -26,6 +27,7 @@ export class SearchComponent implements OnInit {
       console.log(profile);
       this.profile = profile;
     })
+
   }
 
   ngOnInit(): void {

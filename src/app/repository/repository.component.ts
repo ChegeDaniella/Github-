@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from '../profile.service';
+import { Repository } from '../repository'
 
 
 @Component({
@@ -8,8 +9,17 @@ import { ProfileService } from '../profile.service';
   styleUrls: ['./repository.component.css']
 })
 export class RepositoryComponent implements OnInit {
+  repos: any;
 
-  constructor() { }
+  constructor(private profileService: ProfileService) {
+
+  }
+  showRepos(){
+    this.profileService.getProfileRepos().subscribe(repos => {
+      console.log(repos);
+      this.repos = repos;
+    })
+   }
 
   ngOnInit(): void {
   }

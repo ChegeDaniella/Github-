@@ -1,3 +1,15 @@
 <div>
     <p>These are the repositories found in the users account!!</p>
+    <button class="btn btn-primary" (click)="showRepos()">show repos</button>
+    
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <div class="panel-body" *ngFor="let repo of repos">
+            <p class="clearfix">
+                {{repo.name}} <a href="{{repo.html_url}}" target="_blank" class="btn btn-sm btn-warning pull-right">View this project on github</a><br>
+            </p>
+            <p>{{repo.description}}</p>
+        </div>
+    </div>
 </div>

@@ -1,3 +1,3 @@
 export class User {
- public userInput:any
+ constructor(public userInput:any){}
 }
